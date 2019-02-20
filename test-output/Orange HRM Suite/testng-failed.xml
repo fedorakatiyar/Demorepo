@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [Orange HRM Suite]" parallel="instances">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="orange.listeners.Listener"/>
+  </listeners>
+  <test name="Edge(failed)" parallel="instances">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="orange.smoke.test.smoke">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- orange.smoke.test.smoke -->
+    </classes>
+  </test> <!-- Edge(failed) -->
+</suite> <!-- Failed suite [Orange HRM Suite] -->
